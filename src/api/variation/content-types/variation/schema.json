@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "variations",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
+    "singularName": "variation",
+    "pluralName": "variations",
+    "displayName": "Variation",
     "description": ""
   },
   "options": {
@@ -33,36 +33,17 @@
         "audios"
       ]
     },
-    "gallery": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true
-    },
     "sale": {
-      "type": "integer"
-    },
-    "isFeatured": {
-      "type": "boolean"
-    },
-    "short_description": {
-      "type": "richtext"
+      "type": "decimal"
     },
     "description": {
       "type": "richtext"
     },
-    "attributes": {
-      "type": "json"
-    },
-    "variations": {
+    "product": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variation.variation",
-      "mappedBy": "product"
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "variations"
     }
   }
 }
