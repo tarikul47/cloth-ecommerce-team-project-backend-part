@@ -19,6 +19,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::product.product"
+    },
+    "variation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::variation.variation"
     }
   }
 }

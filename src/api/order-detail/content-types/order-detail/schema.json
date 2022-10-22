@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_details",
+  "info": {
+    "singularName": "order-detail",
+    "pluralName": "order-details",
+    "displayName": "Order Detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total": {
+      "type": "decimal"
+    },
+    "payment_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-detail.payment-detail"
+    }
+  }
+}

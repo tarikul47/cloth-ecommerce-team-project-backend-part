@@ -4,7 +4,8 @@
   "info": {
     "singularName": "catalog",
     "pluralName": "catalogs",
-    "displayName": "Catalog"
+    "displayName": "Catalog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,22 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "catalog"
     }
   }
 }

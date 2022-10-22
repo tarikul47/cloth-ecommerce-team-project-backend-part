@@ -34,14 +34,15 @@
       ]
     },
     "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "sale": {
       "type": "integer"
@@ -63,6 +64,15 @@
       "relation": "oneToMany",
       "target": "api::variation.variation",
       "mappedBy": "product"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "IsASingleProduct": {
+      "type": "boolean"
     }
   }
 }
