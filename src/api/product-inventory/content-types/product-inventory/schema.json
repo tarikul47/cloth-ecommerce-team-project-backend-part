@@ -18,12 +18,14 @@
     "product": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::product.product"
+      "target": "api::product.product",
+      "inversedBy": "product_inventory"
     },
     "variation": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::variation.variation"
+      "target": "api::variation.variation",
+      "inversedBy": "product_inventory"
     }
   }
 }

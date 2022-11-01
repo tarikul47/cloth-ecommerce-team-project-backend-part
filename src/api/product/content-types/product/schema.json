@@ -73,6 +73,12 @@
     },
     "IsASingleProduct": {
       "type": "boolean"
+    },
+    "product_inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-inventory.product-inventory",
+      "mappedBy": "product"
     }
   }
 }

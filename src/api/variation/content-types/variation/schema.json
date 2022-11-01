@@ -44,6 +44,12 @@
       "relation": "manyToOne",
       "target": "api::product.product",
       "inversedBy": "variations"
+    },
+    "product_inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-inventory.product-inventory",
+      "inversedBy": "variation"
     }
   }
 }
